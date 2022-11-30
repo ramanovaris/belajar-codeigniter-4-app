@@ -22,7 +22,7 @@
               <th scope="row"><?= $no++; ?></th>
               <td><img src="/assets/img/<?= $field["sampul"]; ?>" class="sampul" alt="naruto"></td>
               <td><?= $field["judul"]; ?></td>
-              <td><a href="" class="btn btn-success">Detail</a></td>
+              <td><a href="/komik/detail/<?= $field["slug"]; ?>" class="btn btn-success">Detail</a></td>
             </tr>
           <?php endforeach; ?>
         </tbody>
