@@ -11,19 +11,36 @@ class Pages extends BaseController
       "tes" => ["satu", "dua", "tiga"]
     ];
 
-    echo view('layout/header', $data);
-    echo view('pages/home');
-    echo view('layout/footer');
+    return view('pages/home', $data);
   }
 
   public function about()
   {
     $data = [
-      "title" => "About"
+      "title" => "About Me"
     ];
 
-    echo view('layout/header', $data);
-    echo view('pages/about');
-    echo view('layout/footer');
+    return view('pages/about', $data);
+  }
+
+  public function contact()
+  {
+    $data = [
+      "title" => "Contact US",
+      "alamat" => [
+        [
+          "tipe" => "Rumah",
+          "alamat" => "Jalan A.Yani KM 7",
+          "kota" => "Pelaihari"
+        ],
+        [
+          "tipe" => "Kantor",
+          "alamat" => "Matah",
+          "kota" => "Pelaihari"
+        ]
+      ]
+    ];
+
+    return view('pages/contact', $data);
   }
 }
