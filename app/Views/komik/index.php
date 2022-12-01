@@ -26,7 +26,7 @@
           <?php foreach ($responKomik as $field) : ?>
             <tr>
               <th scope="row"><?= $no++; ?></th>
-              <td><img src="/assets/img/<?= $field["sampul"]; ?>" class="sampul" alt="naruto"></td>
+              <td><img src="/assets/img/<?= $field["sampul"]; ?>" loading="lazy" class="sampul" alt="naruto"></td>
               <td><?= $field["judul"]; ?></td>
               <td><a href="/komik/detail/<?= $field["slug"]; ?>" class="btn btn-success">Detail</a></td>
             </tr>
