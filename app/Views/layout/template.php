@@ -18,6 +18,23 @@
   <?= $this->renderSection("content"); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <script>
+    function previewImg() {
+      const sampul = document.querySelector("#sampul");
+      // const sampulLabel = document.querySelector(".custom-file-label");
+      const imgPreview = document.querySelector(".img-preview");
+
+      // sampulLabel.textContent = sampul.files[0].name;
+
+      const fileSampul = new FileReader();
+      fileSampul.readAsDataURL(sampul.files[0]);
+
+      fileSampul.onload = function(e) {
+        imgPreview.src = e.target.result;
+      }
+    }
+  </script>
 </body>
 
 </html>
